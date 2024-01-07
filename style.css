@@ -58,11 +58,12 @@ body {
 }
 
 .box {
-    animation: moveRocket 10s linear infinite;
+    animation: moveRocket 10s linear ;
 }
 
 .diwali {
-    animation: diwali 10s linear infinite;
+    animation: diwali 8s linear ;
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;;
 }
 
 .dot {
@@ -80,7 +81,7 @@ body {
     background-color: black;
     border-radius: 50%;
     position: relative;
-    animation: explode 10s linear infinite;
+    animation: explode 10s linear;
     animation-delay: 6s;
 }
 
@@ -90,7 +91,7 @@ body {
     background-color: red;
     border-radius: 50%;
     position: absolute;
-    animation: particleAnimation 10s infinite;
+    animation: particleAnimation 10s;
     animation-delay: 6s;
 }
 
@@ -100,9 +101,20 @@ body {
         opacity: 0;
     }
 
+
     90% {
         transform: translateY(0px);
         opacity: 1;
+    }
+    90% {
+        transform: translateY(0px);
+        opacity: 1;
+        font-size: 52px;
+    }
+    90% {
+        transform: translateY(0px);
+        opacity: 1;
+        font-size: 32px;
     }
 
     100% {
@@ -127,7 +139,17 @@ body {
     }
 }
 
-
+/* @keyframes grow {
+    0% {
+        font-size: 16px;
+    }
+    50% {
+        font-size: 24px;
+    }
+    100% {
+        font-size: 32px;
+    }
+} */
 
 @keyframes explode {
     0% {
