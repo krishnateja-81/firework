@@ -1,0 +1,156 @@
+.moon {
+    height: 75px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: white;
+    border: 5px solid white;
+    box-shadow: 40px 40px 100px rgba(233, 232, 232, 1.9);
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+.dot1 {
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: white;
+    border: 10px white;
+}
+
+.rocket-pulla {
+    height: 40px;
+    width: 1px;
+    background-color: white;
+    padding: 3px;
+
+}
+
+.rocket-main {
+    height: 80px;
+    width: 3px;
+    background-color: red;
+    padding: 10px;
+
+}
+
+.circle1 {
+    height: 2px;
+    width: 21px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.traingle {
+    width: 0px;
+    height: 0px;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-bottom: 31px solid white;
+}
+
+.otthu {
+    height: 10px;
+    width: 2px;
+    background-color: white;
+}
+
+.box {
+    animation: moveRocket 10s linear infinite;
+}
+
+.diwali {
+    animation: diwali 10s linear infinite;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    border: 1px solid rgba(245, 245, 10, 0.51);
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+    animation: explode 10s linear infinite;
+    animation-delay: 6s;
+}
+
+.particle {
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    animation: particleAnimation 10s infinite;
+    animation-delay: 6s;
+}
+
+@keyframes diwali {
+    0% {
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+
+    90% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes moveRocket {
+    0% {
+        transform: translateY(0);
+    }
+
+    60% {
+        transform: translateY(-600px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+}
+
+
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(10);
+    }
+
+    100% {
+        transform: scale(10);
+    }
+}
+
+@keyframes particleAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(0) translateX(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(var(--random-y)) translateX(var(--random-x));
+    }
+}
